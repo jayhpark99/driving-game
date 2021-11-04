@@ -20,6 +20,7 @@ function changeDirection(event) {
     $car.className = data.direction;
   }
 }
+
 var x = 0;
 var interval = setInterval(startCar, 16);
 function startCar() {
