@@ -18,3 +18,5 @@ function changeDirection(event) {
     $car.className = data.direction;
   }
 }
+
+var x = 0;
