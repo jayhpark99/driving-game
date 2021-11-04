@@ -1,0 +1,30 @@
+body {
+  background: rgb(41, 141, 38);
+}
+
+img {
+  width: 120px;
+  position: absolute;
+  top: 0;
+  left: 1;
+}
+
+.north {
+  transform: rotate(270deg);
+  transition: transform 0.5s;
+}
+
+.east {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}
+
+.west {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.south {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
