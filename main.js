@@ -18,12 +18,21 @@ function changeDirection(event) {
   } else if (event.key === 'ArrowDown') {
     data.direction = 'south';
     $car.className = data.direction;
+  } else if (event.key === ' ') {
+    data.carOn = !data.carOn;
+    if (data.carOn === true) {
+      interval = setInterval(startCar, 16);
+    } else {
+      clearInterval(interval);
+    }
   }
 }
 
 var x = 0;
-var interval = setInterval(startCar, 16);
 function startCar() {
   $car.style.left = x++ + 'px';
   location[0] = x;
 }
+
+var interval = setInterval(startCar, 16);
+clearInterval(interval);
