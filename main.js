@@ -21,7 +21,7 @@ function changeDirection(event) {
   } else if (event.key === ' ') {
     data.carOn = !data.carOn;
     if (data.carOn === true) {
-      interval = setInterval(startCar, 16);
+      interval = setInterval(startCar, 1);
     } else {
       clearInterval(interval);
     }
@@ -29,10 +29,20 @@ function changeDirection(event) {
 }
 
 var x = 0;
+var y = 0;
 function startCar() {
-  $car.style.left = x++ + 'px';
+  if (data.direction === 'east') {
+    $car.style.left = x++ + 'px';
+  } else if (data.direction === 'west') {
+    $car.style.left = x-- + 'px';
+  } else if (data.direction === 'north') {
+    $car.style.top = y-- + 'px';
+  } else if (data.direction === 'south') {
+    $car.style.top = y++ + 'px';
+  }
   location[0] = x;
+  location[1] = y;
 }
 
-var interval = setInterval(startCar, 16);
+var interval = setInterval(startCar, 1);
 clearInterval(interval);
