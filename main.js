@@ -1,5 +1,7 @@
 var data = {
-  direction: 'east'
+  direction: 'east',
+  location: [0, 0],
+  carOn: false
 };
 var $car = document.querySelector('img');
 document.addEventListener('keydown', changeDirection);
